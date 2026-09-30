@@ -1,153 +1,8 @@
-<?xml version='1.0' encoding='ASCII'?>
-<?grc format='1' created='3.7.5'?>
+<?xml version='1.0' encoding='utf-8'?>
 <flow_graph>
-  <timestamp>Sun Nov 16 03:18:49 2014</timestamp>
+  <timestamp>Fri Jun 28 23:19:32 2013</timestamp>
   <block>
-    <key>options</key>
-    <param>
-      <key>id</key>
-      <value>ask_rx_fcd</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>title</key>
-      <value>AM Receiver</value>
-    </param>
-    <param>
-      <key>author</key>
-      <value>OZ9AEC</value>
-    </param>
-    <param>
-      <key>description</key>
-      <value>Simple AM receiver prototype</value>
-    </param>
-    <param>
-      <key>window_size</key>
-      <value>1280, 1024</value>
-    </param>
-    <param>
-      <key>generate_options</key>
-      <value>wx_gui</value>
-    </param>
-    <param>
-      <key>category</key>
-      <value>Custom</value>
-    </param>
-    <param>
-      <key>run_options</key>
-      <value>prompt</value>
-    </param>
-    <param>
-      <key>run</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>max_nouts</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>realtime_scheduling</key>
-      <value></value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(10, 10)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>id</key>
-      <value>samp_rate</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>1e6</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(170, 9)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>id</key>
-      <value>LO</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(268, 8)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>id</key>
-      <value>xlate_filter_taps</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>firdes.low_pass(1000, samp_rate, 48000, 10000, firdes.WIN_HAMMING, 6.76)</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(392, 238)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable_slider</key>
+    <key>variable_qtgui_range</key>
     <param>
       <key>id</key>
       <value>offset_fine</value>
@@ -190,11 +45,7 @@
     </param>
     <param>
       <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>_coordinate</key>
@@ -204,9 +55,56 @@
       <key>_rotation</key>
       <value>0</value>
     </param>
+    <param>
+      <key>start</key>
+      <value>-1000</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>1000</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>(1000 - -1000) / 400</value>
+    </param>
+    <param>
+      <key>rangeType</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value />
+    </param>
   </block>
   <block>
-    <key>variable_static_text</key>
+    <key>variable</key>
+    <param>
+      <key>id</key>
+      <value>LO</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(268, 8)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_qtgui_label</key>
     <param>
       <key>id</key>
       <value>lo_freq</value>
@@ -237,11 +135,7 @@
     </param>
     <param>
       <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>_coordinate</key>
@@ -251,9 +145,40 @@
       <key>_rotation</key>
       <value>0</value>
     </param>
+    <param>
+      <key>type</key>
+      <value>raw</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value />
+    </param>
   </block>
   <block>
-    <key>variable_static_text</key>
+    <key>variable</key>
+    <param>
+      <key>id</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>96000</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(170, 9)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_qtgui_label</key>
     <param>
       <key>id</key>
       <value>rx_freq</value>
@@ -284,11 +209,7 @@
     </param>
     <param>
       <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>_coordinate</key>
@@ -298,9 +219,135 @@
       <key>_rotation</key>
       <value>0</value>
     </param>
+    <param>
+      <key>type</key>
+      <value>raw</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value />
+    </param>
   </block>
   <block>
-    <key>variable_slider</key>
+    <key>freq_xlating_fir_filter_xxx</key>
+    <param>
+      <key>id</key>
+      <value>xlating_fir_filter</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>ccc</value>
+    </param>
+    <param>
+      <key>decim</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>taps</key>
+      <value>xlate_filter_taps</value>
+    </param>
+    <param>
+      <key>center_freq</key>
+      <value>-(offset_coarse+offset_fine)</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(404, 319)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_qtgui_range</key>
+    <param>
+      <key>id</key>
+      <value>offset_coarse</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>Coarse tune</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>min</key>
+      <value>-40000</value>
+    </param>
+    <param>
+      <key>max</key>
+      <value>40000</value>
+    </param>
+    <param>
+      <key>num_steps</key>
+      <value>960</value>
+    </param>
+    <param>
+      <key>style</key>
+      <value>wx.SL_HORIZONTAL</value>
+    </param>
+    <param>
+      <key>converver</key>
+      <value>float_converter</value>
+    </param>
+    <param>
+      <key>grid_pos</key>
+      <value>6,2,1,2</value>
+    </param>
+    <param>
+      <key>notebook</key>
+      <value />
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(11, 106)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>start</key>
+      <value>-40000</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>40000</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>(40000 - -40000) / 960</value>
+    </param>
+    <param>
+      <key>rangeType</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value />
+    </param>
+  </block>
+  <block>
+    <key>variable_qtgui_range</key>
     <param>
       <key>id</key>
       <value>trans</value>
@@ -343,11 +390,7 @@
     </param>
     <param>
       <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>_coordinate</key>
@@ -357,9 +400,33 @@
       <key>_rotation</key>
       <value>0</value>
     </param>
+    <param>
+      <key>start</key>
+      <value>500</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>5000</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>(5000 - 500) / 900</value>
+    </param>
+    <param>
+      <key>rangeType</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value />
+    </param>
   </block>
   <block>
-    <key>variable_slider</key>
+    <key>variable_qtgui_range</key>
     <param>
       <key>id</key>
       <value>af_gain</value>
@@ -402,11 +469,7 @@
     </param>
     <param>
       <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>_coordinate</key>
@@ -416,9 +479,33 @@
       <key>_rotation</key>
       <value>0</value>
     </param>
+    <param>
+      <key>start</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>5</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>(5 - 0) / 50</value>
+    </param>
+    <param>
+      <key>rangeType</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value />
+    </param>
   </block>
   <block>
-    <key>variable_chooser</key>
+    <key>variable_qtgui_chooser</key>
     <param>
       <key>id</key>
       <value>display_selector</value>
@@ -445,7 +532,7 @@
     </param>
     <param>
       <key>type</key>
-      <value>drop_down</value>
+      <value>raw</value>
     </param>
     <param>
       <key>style</key>
@@ -457,11 +544,7 @@
     </param>
     <param>
       <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>_coordinate</key>
@@ -471,9 +554,48 @@
       <key>_rotation</key>
       <value>0</value>
     </param>
+    <param>
+      <key>num_opts</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>options</key>
+      <value>[0, 1]</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>combo_box</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value />
+    </param>
   </block>
   <block>
-    <key>wxgui_fftsink2</key>
+    <key>variable</key>
+    <param>
+      <key>id</key>
+      <value>xlate_filter_taps</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>firdes.low_pass(1000, samp_rate, 48000, 10000, firdes.WIN_HAMMING, 6.76)</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(392, 238)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>qtgui_freq_sink_x</key>
     <param>
       <key>id</key>
       <value>fftsink</value>
@@ -488,7 +610,7 @@
     </param>
     <param>
       <key>title</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>samp_rate</key>
@@ -548,19 +670,11 @@
     </param>
     <param>
       <key>notebook</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>freqvar</key>
       <value>None</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -570,9 +684,29 @@
       <key>_rotation</key>
       <value>0</value>
     </param>
+    <param>
+      <key>name</key>
+      <value>'fftsink'</value>
+    </param>
+    <param>
+      <key>fftsize</key>
+      <value>512</value>
+    </param>
+    <param>
+      <key>bw</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>nconnections</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value />
+    </param>
   </block>
   <block>
-    <key>variable_slider</key>
+    <key>variable_qtgui_range</key>
     <param>
       <key>id</key>
       <value>freq</value>
@@ -615,11 +749,7 @@
     </param>
     <param>
       <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>_coordinate</key>
@@ -628,6 +758,30 @@
     <param>
       <key>_rotation</key>
       <value>0</value>
+    </param>
+    <param>
+      <key>start</key>
+      <value>100e6</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>1e9</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>(1e9 - 100e6) / 960</value>
+    </param>
+    <param>
+      <key>rangeType</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value />
     </param>
   </block>
   <block>
@@ -642,7 +796,7 @@
     </param>
     <param>
       <key>file</key>
-      <value>/tmp/fifo</value>
+      <value>captures/demodulated.float32</value>
     </param>
     <param>
       <key>type</key>
@@ -657,24 +811,16 @@
       <value>False</value>
     </param>
     <param>
-      <key>append</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
       <key>_coordinate</key>
       <value>(987, 489)</value>
     </param>
     <param>
       <key>_rotation</key>
       <value>0</value>
+    </param>
+    <param>
+      <key>append</key>
+      <value>False</value>
     </param>
   </block>
   <block>
@@ -698,22 +844,6 @@
     <param>
       <key>vlen</key>
       <value>1</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -771,22 +901,6 @@
       <value>6.76</value>
     </param>
     <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
       <key>_coordinate</key>
       <value>(671, 299)</value>
     </param>
@@ -796,7 +910,66 @@
     </param>
   </block>
   <block>
-    <key>variable_slider</key>
+    <key>fcd</key>
+    <param>
+      <key>id</key>
+      <value>fcd_source_c_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>device_name</key>
+      <value>hw:2</value>
+    </param>
+    <param>
+      <key>freq</key>
+      <value>freq</value>
+    </param>
+    <param>
+      <key>lna</key>
+      <value>rf_gain</value>
+    </param>
+    <param>
+      <key>mixer</key>
+      <value>rf_gain2</value>
+    </param>
+    <param>
+      <key>ppm</key>
+      <value>-120</value>
+    </param>
+    <param>
+      <key>dci</key>
+      <value>0.0</value>
+    </param>
+    <param>
+      <key>dcq</key>
+      <value>0.0</value>
+    </param>
+    <param>
+      <key>iq_phase</key>
+      <value>0.0</value>
+    </param>
+    <param>
+      <key>iq_gain</key>
+      <value>1.0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(156, 290)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>devicename</key>
+      <value>'hw:2'</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_qtgui_range</key>
     <param>
       <key>id</key>
       <value>rf_gain</value>
@@ -839,11 +1012,7 @@
     </param>
     <param>
       <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>_coordinate</key>
@@ -853,9 +1022,33 @@
       <key>_rotation</key>
       <value>0</value>
     </param>
+    <param>
+      <key>start</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>50</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>(50 - 0) / 50</value>
+    </param>
+    <param>
+      <key>rangeType</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value />
+    </param>
   </block>
   <block>
-    <key>variable_slider</key>
+    <key>variable_qtgui_range</key>
     <param>
       <key>id</key>
       <value>rf_gain2</value>
@@ -894,15 +1087,11 @@
     </param>
     <param>
       <key>grid_pos</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>_coordinate</key>
@@ -912,9 +1101,33 @@
       <key>_rotation</key>
       <value>0</value>
     </param>
+    <param>
+      <key>start</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>100</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>(100 - 0) / 100</value>
+    </param>
+    <param>
+      <key>rangeType</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value />
+    </param>
   </block>
   <block>
-    <key>variable_slider</key>
+    <key>variable_qtgui_range</key>
     <param>
       <key>id</key>
       <value>width</value>
@@ -957,11 +1170,7 @@
     </param>
     <param>
       <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>_coordinate</key>
@@ -971,9 +1180,33 @@
       <key>_rotation</key>
       <value>0</value>
     </param>
+    <param>
+      <key>start</key>
+      <value>2000</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>400000</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>(400000 - 2000) / 760</value>
+    </param>
+    <param>
+      <key>rangeType</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value />
+    </param>
   </block>
   <block>
-    <key>wxgui_scopesink2</key>
+    <key>qtgui_time_sink_x</key>
     <param>
       <key>id</key>
       <value>wxgui_scopesink2_0</value>
@@ -1020,31 +1253,23 @@
     </param>
     <param>
       <key>win_size</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>grid_pos</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>notebook</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>trig_mode</key>
-      <value>wxgui.TRIG_MODE_AUTO</value>
+      <value>gr.gr_TRIG_MODE_AUTO</value>
     </param>
     <param>
       <key>y_axis_label</key>
       <value>Counts</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1053,6 +1278,26 @@
     <param>
       <key>_rotation</key>
       <value>0</value>
+    </param>
+    <param>
+      <key>name</key>
+      <value>'Scope Plot'</value>
+    </param>
+    <param>
+      <key>srate</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>size</key>
+      <value>1024</value>
+    </param>
+    <param>
+      <key>nconnections</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value />
     </param>
   </block>
   <block>
@@ -1082,22 +1327,6 @@
       <value>8000</value>
     </param>
     <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
       <key>_coordinate</key>
       <value>(477, 500)</value>
     </param>
@@ -1107,368 +1336,66 @@
     </param>
   </block>
   <block>
-    <key>freq_xlating_fir_filter_xxx</key>
+    <key>options</key>
     <param>
       <key>id</key>
-      <value>xlating_fir_filter</value>
+      <value>ask_rx_fcd</value>
     </param>
     <param>
       <key>_enabled</key>
       <value>True</value>
     </param>
     <param>
-      <key>type</key>
-      <value>ccc</value>
+      <key>title</key>
+      <value>AM Receiver</value>
     </param>
     <param>
-      <key>decim</key>
-      <value>1</value>
+      <key>author</key>
+      <value>Ulf Bertilsson</value>
     </param>
     <param>
-      <key>taps</key>
-      <value>xlate_filter_taps</value>
+      <key>description</key>
+      <value>Modern GNU Radio Companion flowgraph validated for this repository.</value>
     </param>
     <param>
-      <key>center_freq</key>
-      <value>-(offset_coarse+offset_fine)</value>
+      <key>window_size</key>
+      <value>1280, 1024</value>
     </param>
     <param>
-      <key>samp_rate</key>
-      <value>samp_rate</value>
+      <key>generate_options</key>
+      <value>qt_gui</value>
     </param>
     <param>
-      <key>alias</key>
-      <value></value>
+      <key>category</key>
+      <value>Custom</value>
     </param>
     <param>
-      <key>affinity</key>
-      <value></value>
+      <key>run_options</key>
+      <value>prompt</value>
     </param>
     <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(404, 319)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable_slider</key>
-    <param>
-      <key>id</key>
-      <value>offset_coarse</value>
-    </param>
-    <param>
-      <key>_enabled</key>
+      <key>run</key>
       <value>True</value>
     </param>
     <param>
-      <key>label</key>
-      <value>Coarse tune</value>
-    </param>
-    <param>
-      <key>value</key>
+      <key>max_nouts</key>
       <value>0</value>
     </param>
     <param>
-      <key>min</key>
-      <value>-40000</value>
-    </param>
-    <param>
-      <key>max</key>
-      <value>40000</value>
-    </param>
-    <param>
-      <key>num_steps</key>
-      <value>960</value>
-    </param>
-    <param>
-      <key>style</key>
-      <value>wx.SL_HORIZONTAL</value>
-    </param>
-    <param>
-      <key>converver</key>
-      <value>float_converter</value>
-    </param>
-    <param>
-      <key>grid_pos</key>
-      <value>6,2,1,2</value>
-    </param>
-    <param>
-      <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
+      <key>realtime_scheduling</key>
+      <value />
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(11, 106)</value>
+      <value>(10, 10)</value>
     </param>
     <param>
       <key>_rotation</key>
       <value>0</value>
     </param>
-  </block>
-  <block>
-    <key>osmosdr_source</key>
     <param>
-      <key>id</key>
-      <value>osmosdr_source_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>fc32</value>
-    </param>
-    <param>
-      <key>args</key>
-      <value></value>
-    </param>
-    <param>
-      <key>nchan</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>sample_rate</key>
-      <value>samp_rate</value>
-    </param>
-    <param>
-      <key>freq0</key>
-      <value>freq</value>
-    </param>
-    <param>
-      <key>corr0</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>dc_offset_mode0</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>iq_balance_mode0</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>gain_mode0</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>gain0</key>
-      <value>rf_gain</value>
-    </param>
-    <param>
-      <key>if_gain0</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>bb_gain0</key>
-      <value>rf_gain2</value>
-    </param>
-    <param>
-      <key>ant0</key>
-      <value></value>
-    </param>
-    <param>
-      <key>bw0</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>freq1</key>
-      <value>100e6</value>
-    </param>
-    <param>
-      <key>corr1</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>dc_offset_mode1</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>iq_balance_mode1</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>gain_mode1</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>gain1</key>
-      <value>10</value>
-    </param>
-    <param>
-      <key>if_gain1</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>bb_gain1</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>ant1</key>
-      <value></value>
-    </param>
-    <param>
-      <key>bw1</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>freq2</key>
-      <value>100e6</value>
-    </param>
-    <param>
-      <key>corr2</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>dc_offset_mode2</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>iq_balance_mode2</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>gain_mode2</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>gain2</key>
-      <value>10</value>
-    </param>
-    <param>
-      <key>if_gain2</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>bb_gain2</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>ant2</key>
-      <value></value>
-    </param>
-    <param>
-      <key>bw2</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>freq3</key>
-      <value>100e6</value>
-    </param>
-    <param>
-      <key>corr3</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>dc_offset_mode3</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>iq_balance_mode3</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>gain_mode3</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>gain3</key>
-      <value>10</value>
-    </param>
-    <param>
-      <key>if_gain3</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>bb_gain3</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>ant3</key>
-      <value></value>
-    </param>
-    <param>
-      <key>bw3</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>freq4</key>
-      <value>100e6</value>
-    </param>
-    <param>
-      <key>corr4</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>dc_offset_mode4</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>iq_balance_mode4</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>gain_mode4</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>gain4</key>
-      <value>10</value>
-    </param>
-    <param>
-      <key>if_gain4</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>bb_gain4</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>ant4</key>
-      <value></value>
-    </param>
-    <param>
-      <key>bw4</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(128, 245)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
+      <key>output_language</key>
+      <value>python</value>
     </param>
   </block>
   <connection>
@@ -1480,6 +1407,12 @@
   <connection>
     <source_block_id>blks2_am_demod_cf_0</source_block_id>
     <sink_block_id>gr_multiply_const_vxx_1</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>fcd_source_c_0</source_block_id>
+    <sink_block_id>xlating_fir_filter</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -1504,12 +1437,6 @@
   <connection>
     <source_block_id>low_pass_filter</source_block_id>
     <sink_block_id>blks2_am_demod_cf_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>osmosdr_source_0</source_block_id>
-    <sink_block_id>xlating_fir_filter</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>

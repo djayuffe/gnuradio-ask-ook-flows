@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='ASCII'?>
+<?xml version='1.0' encoding='utf-8'?>
 <flow_graph>
   <timestamp>Tue Sep 28 23:17:16 2010</timestamp>
   <block>
@@ -17,11 +17,11 @@
     </param>
     <param>
       <key>author</key>
-      <value>Jiri Pittner, OZ9AEC</value>
+      <value>Ulf Bertilsson</value>
     </param>
     <param>
       <key>description</key>
-      <value>ASK receiver of Keeloq at 433.9MHz, based on OZ9AEC's AM receiver</value>
+      <value>Modern GNU Radio Companion flowgraph validated for this repository.</value>
     </param>
     <param>
       <key>window_size</key>
@@ -29,7 +29,7 @@
     </param>
     <param>
       <key>generate_options</key>
-      <value>wx_gui</value>
+      <value>qt_gui</value>
     </param>
     <param>
       <key>category</key>
@@ -45,7 +45,7 @@
     </param>
     <param>
       <key>realtime_scheduling</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>_coordinate</key>
@@ -55,9 +55,13 @@
       <key>_rotation</key>
       <value>0</value>
     </param>
+    <param>
+      <key>output_language</key>
+      <value>python</value>
+    </param>
   </block>
   <block>
-    <key>wxgui_fftsink2</key>
+    <key>qtgui_freq_sink_x</key>
     <param>
       <key>id</key>
       <value>wxgui_fftsink2_0</value>
@@ -128,7 +132,7 @@
     </param>
     <param>
       <key>grid_pos</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>notebook</key>
@@ -141,6 +145,26 @@
     <param>
       <key>_rotation</key>
       <value>0</value>
+    </param>
+    <param>
+      <key>name</key>
+      <value>'RF Spectrum'</value>
+    </param>
+    <param>
+      <key>fftsize</key>
+      <value>768</value>
+    </param>
+    <param>
+      <key>bw</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>nconnections</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value />
     </param>
   </block>
   <block>
@@ -167,7 +191,7 @@
     </param>
     <param>
       <key>notebook</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>_coordinate</key>
@@ -179,7 +203,7 @@
     </param>
   </block>
   <block>
-    <key>variable_slider</key>
+    <key>variable_qtgui_range</key>
     <param>
       <key>id</key>
       <value>offset_fine</value>
@@ -222,7 +246,7 @@
     </param>
     <param>
       <key>notebook</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>_coordinate</key>
@@ -232,9 +256,33 @@
       <key>_rotation</key>
       <value>0</value>
     </param>
+    <param>
+      <key>start</key>
+      <value>-1000</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>1000</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>(1000 - -1000) / 400</value>
+    </param>
+    <param>
+      <key>rangeType</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value />
+    </param>
   </block>
   <block>
-    <key>variable_slider</key>
+    <key>variable_qtgui_range</key>
     <param>
       <key>id</key>
       <value>af_gain</value>
@@ -277,7 +325,7 @@
     </param>
     <param>
       <key>notebook</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>_coordinate</key>
@@ -286,6 +334,30 @@
     <param>
       <key>_rotation</key>
       <value>0</value>
+    </param>
+    <param>
+      <key>start</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>2</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>(2 - 0) / 100</value>
+    </param>
+    <param>
+      <key>rangeType</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value />
     </param>
   </block>
   <block>
@@ -358,7 +430,7 @@
     </param>
   </block>
   <block>
-    <key>variable_chooser</key>
+    <key>variable_qtgui_chooser</key>
     <param>
       <key>id</key>
       <value>agc_decay</value>
@@ -385,7 +457,7 @@
     </param>
     <param>
       <key>type</key>
-      <value>drop_down</value>
+      <value>raw</value>
     </param>
     <param>
       <key>style</key>
@@ -397,7 +469,7 @@
     </param>
     <param>
       <key>notebook</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>_coordinate</key>
@@ -407,9 +479,25 @@
       <key>_rotation</key>
       <value>0</value>
     </param>
+    <param>
+      <key>num_opts</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>options</key>
+      <value>[100e-6, 50e-6, 10e-6]</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>combo_box</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value />
+    </param>
   </block>
   <block>
-    <key>variable_slider</key>
+    <key>variable_qtgui_range</key>
     <param>
       <key>id</key>
       <value>center</value>
@@ -452,7 +540,7 @@
     </param>
     <param>
       <key>notebook</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>_coordinate</key>
@@ -461,6 +549,30 @@
     <param>
       <key>_rotation</key>
       <value>0</value>
+    </param>
+    <param>
+      <key>start</key>
+      <value>-5000</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>5000</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>(5000 - -5000) / 200</value>
+    </param>
+    <param>
+      <key>rangeType</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value />
     </param>
   </block>
   <block>
@@ -487,7 +599,7 @@
     </param>
   </block>
   <block>
-    <key>variable_slider</key>
+    <key>variable_qtgui_range</key>
     <param>
       <key>id</key>
       <value>offset_coarse</value>
@@ -530,7 +642,7 @@
     </param>
     <param>
       <key>notebook</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>_coordinate</key>
@@ -540,9 +652,33 @@
       <key>_rotation</key>
       <value>0</value>
     </param>
+    <param>
+      <key>start</key>
+      <value>-100000</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>100000</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>(100000 - -100000) / 1000</value>
+    </param>
+    <param>
+      <key>rangeType</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value />
+    </param>
   </block>
   <block>
-    <key>variable_slider</key>
+    <key>variable_qtgui_range</key>
     <param>
       <key>id</key>
       <value>trans</value>
@@ -585,7 +721,7 @@
     </param>
     <param>
       <key>notebook</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>_coordinate</key>
@@ -595,9 +731,33 @@
       <key>_rotation</key>
       <value>0</value>
     </param>
+    <param>
+      <key>start</key>
+      <value>100</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>2000</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>(2000 - 100) / 100</value>
+    </param>
+    <param>
+      <key>rangeType</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value />
+    </param>
   </block>
   <block>
-    <key>variable_slider</key>
+    <key>variable_qtgui_range</key>
     <param>
       <key>id</key>
       <value>width</value>
@@ -640,7 +800,7 @@
     </param>
     <param>
       <key>notebook</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>_coordinate</key>
@@ -650,9 +810,33 @@
       <key>_rotation</key>
       <value>0</value>
     </param>
+    <param>
+      <key>start</key>
+      <value>1000</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>100000</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>(100000 - 1000) / 190</value>
+    </param>
+    <param>
+      <key>rangeType</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value />
+    </param>
   </block>
   <block>
-    <key>variable_text_box</key>
+    <key>variable_qtgui_entry</key>
     <param>
       <key>id</key>
       <value>freq</value>
@@ -683,7 +867,7 @@
     </param>
     <param>
       <key>notebook</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>_coordinate</key>
@@ -693,9 +877,17 @@
       <key>_rotation</key>
       <value>0</value>
     </param>
+    <param>
+      <key>type</key>
+      <value>raw</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value />
+    </param>
   </block>
   <block>
-    <key>variable_slider</key>
+    <key>variable_qtgui_range</key>
     <param>
       <key>id</key>
       <value>rf_gain</value>
@@ -738,7 +930,7 @@
     </param>
     <param>
       <key>notebook</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>_coordinate</key>
@@ -747,6 +939,30 @@
     <param>
       <key>_rotation</key>
       <value>0</value>
+    </param>
+    <param>
+      <key>start</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>50</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>(50 - 0) / 50</value>
+    </param>
+    <param>
+      <key>rangeType</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value />
     </param>
   </block>
   <block>
@@ -809,7 +1025,7 @@
     </param>
   </block>
   <block>
-    <key>variable_static_text</key>
+    <key>variable_qtgui_label</key>
     <param>
       <key>id</key>
       <value>rx_freq</value>
@@ -840,7 +1056,7 @@
     </param>
     <param>
       <key>notebook</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>_coordinate</key>
@@ -850,9 +1066,17 @@
       <key>_rotation</key>
       <value>0</value>
     </param>
+    <param>
+      <key>type</key>
+      <value>raw</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value />
+    </param>
   </block>
   <block>
-    <key>usrp_simple_source_x</key>
+    <key>uhd_usrp_source</key>
     <param>
       <key>id</key>
       <value>usrp_src</value>
@@ -863,11 +1087,11 @@
     </param>
     <param>
       <key>type</key>
-      <value>complex</value>
+      <value>fc32</value>
     </param>
     <param>
       <key>format</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>which</key>
@@ -899,7 +1123,7 @@
     </param>
     <param>
       <key>hb_filters</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>_coordinate</key>
@@ -907,6 +1131,66 @@
     </param>
     <param>
       <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>otw</key>
+      <value />
+    </param>
+    <param>
+      <key>stream_args</key>
+      <value />
+    </param>
+    <param>
+      <key>stream_chans</key>
+      <value>[]</value>
+    </param>
+    <param>
+      <key>dev_addr</key>
+      <value />
+    </param>
+    <param>
+      <key>dev_args</key>
+      <value />
+    </param>
+    <param>
+      <key>sync</key>
+      <value>sync</value>
+    </param>
+    <param>
+      <key>start_time</key>
+      <value>-1.0</value>
+    </param>
+    <param>
+      <key>clock_rate</key>
+      <value>0.0</value>
+    </param>
+    <param>
+      <key>num_mboards</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>nchan</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>center_freq0</key>
+      <value>freq</value>
+    </param>
+    <param>
+      <key>gain0</key>
+      <value>rf_gain</value>
+    </param>
+    <param>
+      <key>ant0</key>
+      <value>'TX/RX'</value>
+    </param>
+    <param>
+      <key>bw0</key>
       <value>0</value>
     </param>
   </block>
@@ -1019,7 +1303,7 @@
     </param>
     <param>
       <key>file</key>
-      <value>/tmp/fifo</value>
+      <value>captures/demodulated.float32</value>
     </param>
     <param>
       <key>type</key>
@@ -1037,9 +1321,17 @@
       <key>_rotation</key>
       <value>0</value>
     </param>
+    <param>
+      <key>unbuffered</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>append</key>
+      <value>False</value>
+    </param>
   </block>
   <block>
-    <key>wxgui_scopesink2</key>
+    <key>qtgui_time_sink_x</key>
     <param>
       <key>id</key>
       <value>wxgui_scopesink2_0</value>
@@ -1086,15 +1378,15 @@
     </param>
     <param>
       <key>win_size</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>grid_pos</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>notebook</key>
-      <value></value>
+      <value />
     </param>
     <param>
       <key>_coordinate</key>
@@ -1103,6 +1395,26 @@
     <param>
       <key>_rotation</key>
       <value>0</value>
+    </param>
+    <param>
+      <key>name</key>
+      <value>'Scope Plot'</value>
+    </param>
+    <param>
+      <key>srate</key>
+      <value>samp_rate/5</value>
+    </param>
+    <param>
+      <key>size</key>
+      <value>1024</value>
+    </param>
+    <param>
+      <key>nconnections</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value />
     </param>
   </block>
   <connection>

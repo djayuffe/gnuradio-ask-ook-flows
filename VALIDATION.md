@@ -10,7 +10,7 @@ GNU Radio: 3.8.5.0
 
 - Result: OK
 
-## modern/ask_rx2.grc.legacy-modernized
+## modern/ask_rx2.variant.grc
 
 - Result: OK
 
@@ -18,7 +18,7 @@ GNU Radio: 3.8.5.0
 
 - Result: OK
 
-## modern/ask_rx_fcd.grc.legacy-modernized
+## modern/ask_rx_fcd.variant.grc
 
 - Result: OK
 
@@ -26,7 +26,7 @@ GNU Radio: 3.8.5.0
 
 - Result: OK
 
-## modern/ask_rx_fcd_2.grc.legacy-modernized
+## modern/ask_rx_fcd_2.variant.grc
 
 - Result: OK
 

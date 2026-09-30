@@ -21,7 +21,7 @@
     </param>
     <param>
       <key>description</key>
-      <value>ASK receiver of Keeloq at 433.9MHz, based on OZ9AEC's AM receiver</value>
+      <value>Modern GNU Radio Companion flowgraph validated for this repository.</value>
     </param>
     <param>
       <key>window_size</key>
